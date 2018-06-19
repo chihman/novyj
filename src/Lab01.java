@@ -8,11 +8,8 @@ public class Lab01 {
 
     public static void task4140(String x, String y) { /*2z ???*/
 
-        System.out.println(x + " Бонд, Джеймс Бонд.");
+        System.out.println( " Меня зовут" + x+ ","+y);
 
-        System.out.println(x + "Джек Воробей, " + y + " Джек Воробей.");
-
-        System.out.println(x + "Александр, Крюков Александр.");
     }
 
     public static void task2632(int x, int y, int z, String w) {
