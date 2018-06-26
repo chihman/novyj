@@ -114,36 +114,36 @@ public class Lab01Suite {
     public void task6497test() {
         int[] arr = new int[]{9, 8, 9, 1, 1, 5, 1, 1};
         double a[] = Lab07.task6497(arr);
-        double[] b = new double[]{4, 6250, 3, 6250, 4, 6250, 3, 3750, 3, 3750, 0, 6250, 3, 3750, 3, 3750};
+        double[] b = new double[]{4.6250, 3.6250, 4.6250, 3.3750, 3.3750, 0.6250, 3.3750, 3.3750};
 
-        Assert.assertEquals(a, b);//нет точности
+        Assert.assertArrayEquals(a, b, 0.001);//нет точности
     }
 
     @Test
     public void task9774() {
         double x = 31;
         double data1[] = new double[]{9, 8, 7, 6, 5, 4};
-        double a[] = Lab07.task9774(x, data1);
+        Lab07.task9774(x, data1);
         double b[] = new double[]{279, 248, 217, 186, 155, 124};
-        Assert.assertEquals(a, b);//нет точности
+        Assert.assertArrayEquals(data1, b, 0.001);//нет точности
 
         x = -3;
         double data2[] = new double[]{9, 8, 7, 6, 5, 4};
-        double a2[] = Lab07.task9774(x, data2);
+        Lab07.task9774(x, data2);
         double b2[] = new double[]{-27, -24, -21, -18, -15, -12};
-        Assert.assertEquals(a2, b2);//нет точности
+        Assert.assertArrayEquals(data2, b2, 0.001);//нет точности
 
         x = 11;
         double data3[] = new double[]{98, 76, 54};
-        double a3[] = Lab07.task9774(x, data3);
+        Lab07.task9774(x, data3);
         double b3[] = new double[]{1078, 836, 594};
-        Assert.assertEquals(a3, b3);//нет точности
+        Assert.assertArrayEquals(data3, b3, 0.001);//нет точности
 
         x = 73;
         double data4[] = new double[]{,};
-        double a4[] = Lab07.task9774(x, data4);
+        Lab07.task9774(x, data4);
         double b4[] = new double[]{};
-        Assert.assertEquals(a4, b4);//нет точности
+        Assert.assertArrayEquals(data4, b4, 0.001);//нет точности
     }
 
     @Test
@@ -152,22 +152,22 @@ public class Lab01Suite {
         double data1[] = new double[]{5, 4, 6, 2, 3, 1};
         double a[] = Lab07.task9271(data1);
         double b[] = new double[]{4, 3, 5, 1, 2, 0};
-        Assert.assertEquals(a, b);//нет точности
+        Assert.assertArrayEquals(a, b, 0.001);//нет точности
 
         double data2[] = new double[]{1, 2, 3, 4, 1, 2};
         double a2[] = Lab07.task9271(data2);
         double b2[] = new double[]{0, 1, 2, 3, 0, 1};
-        Assert.assertEquals(a2, b2);//нет точности
+        Assert.assertArrayEquals(a2, b2, 0.001);//нет точности
 
         double data3[] = new double[]{3, 4, 1, 2, 3, 4, 1, 2, 3, 1, 2};
         double a3[] = Lab07.task9271(data3);
         double b3[] = new double[]{2, 3, 0, 1, 2, 3, 0, 1, 2, 0, 1};
-        Assert.assertEquals(a3, b3);//нет точности
+        Assert.assertArrayEquals(a3, b3, 0.001);//нет точности
 
         double data4[] = new double[]{4, 2, 3, 4, 3, 2};
         double a4[] = Lab07.task9271(data4);
         double b4[] = new double[]{2, 0, 1, 2, 1, 0};
-        Assert.assertEquals(a4, b4);//нет точности
+        Assert.assertArrayEquals(a4, b4, 0.001);//нет точности
 
     }
 
@@ -192,7 +192,7 @@ public class Lab01Suite {
     public void task1292test() {
         char[] arr = new char[]{'a', 'X'};
         String a = Lab07.task1292(arr);
-        String b="a";
+        String b = "a";
         Assert.assertEquals(b, a);
 
         char[] arr2 = new char[]{'a', 'b', 'X'};
@@ -203,6 +203,32 @@ public class Lab01Suite {
         a = Lab07.task1292(arr);
         Assert.assertEquals("abc", a);
     }
+
+    @Test
+    public void task9020test() {
+        double c = Lab02.task9020(0);
+        System.out.println(c);
+        Assert.assertEquals(c, 23.4307, 0.001);
+
+        c = Lab02.task9020(-9);
+        Assert.assertEquals(c, 25.0998, 0.001);
+        System.out.println(c);
+
+        c = Lab02.task9020(61);
+        Assert.assertEquals(c, 0, 0.001);
+        System.out.println(c);
+
+        c = Lab02.task9020(60);
+        Assert.assertEquals(c, 3, 0.001);
+        System.out.println(c);
+
+
+    }
+    @Test(expected = IllegalArgumentException.class)
+    public void task9020assertion1(){
+        Lab02.task9020(62);
+    }
+
 
 }
 

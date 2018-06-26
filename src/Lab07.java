@@ -49,14 +49,14 @@ public class Lab07 {
     }
 
 
-    public static double[] task9774(double x, double[] arr) {//поменял void на возвращает
-        double[] arr2 = new double[arr.length];
+    public static void task9774(double x, double[] arr) {//поменял void на возвращает
+
         for (int i = 0; i < arr.length; i++) {
-            arr2[i] = arr[i] * x;
-            System.out.println(arr2[i]);
+            arr[i] = arr[i] * x;
+            System.out.println(arr[i]);
 
         }
-        return arr2;
+
     }
 
     public static double[] task9271(double[] arr) {
