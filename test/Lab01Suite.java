@@ -229,6 +229,25 @@ public class Lab01Suite {
         Lab02.task9020(62);
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void task3943assertion1() {
+        Lab02.task3943(7489,-7487);
+
+
+    }
+    @Test(expected = IllegalArgumentException.class)
+    public  void task3943assertion2() {
+        Lab02.task3943(-7481,7477);
+
+
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void task7799assertion(){
+        Lab02.task7799(0,30);
+
+    }
+
 
 }
 
