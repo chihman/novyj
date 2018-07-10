@@ -9,7 +9,7 @@ public class Runner9354 {
         System.out.println(c);*/
 
 
-        try    {
+        /*try    {
         double c = Lab02.task9354(0,1,3);
         System.out.println(c);
     } catch(
@@ -17,6 +17,6 @@ public class Runner9354 {
 
     {
         System.out.println(ex.getMessage());
-    }
+    }*/
 
 }

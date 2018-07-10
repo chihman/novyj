@@ -1,4 +1,4 @@
-
+import java.io.FileReader;
 
 public class Lab02 {
     public static double task4411(double x) {
@@ -49,7 +49,10 @@ public class Lab02 {
         return discriminant;
 
     }
-}
+
+    }
+
+
 
 
 
