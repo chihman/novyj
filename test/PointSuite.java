@@ -13,4 +13,16 @@ public class PointSuite {
     Assert.assertEquals(3.6056,result,0.001);
     System.out.println(result);
 }
+@Test
+    public void distanceBetweenPointsTest(){
+    Point p1 = new Point();
+    p1.x=1;
+    p1.y=3;
+    Point p2 = new Point();
+    p2.x=1;
+    p2.y=4;
+    double result = point.distanceBetween(p1.x,p1.y,p2.x,p2.y);
+    Assert.assertEquals(3.6056,result,0.001);
+    System.out.println(result);
+}
 }
