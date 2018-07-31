@@ -34,7 +34,17 @@ public class Robot {
     }
 
     public void turnRight() {
-        if
+        if (q==Direction.UP)
+        {q=Direction.RIGHT;}
+        if (q==Direction.DOWN){
+            q=Direction.LEFT;
+        }
+        if (q==Direction.LEFT){
+            q=Direction.UP;
+        }
+        if (q==Direction.RIGHT){
+            q=Direction.DOWN;
+        }
     }
 
     public void stepForvard() {

@@ -1,7 +1,7 @@
 /**
  * Created by pro-28 on 10.07.2018.
  */
-public class Point {
+/*public class Point {
     public int x;
     public int y;//polja classa
     public static double distanceBetween (int xa, int xb, int ya, int yb){
@@ -16,4 +16,4 @@ public class Point {
         double a = Math.sqrt(Math.pow((this.y-this.x),2)+Math.pow((p2.y-p2.x),2));
         return a;
     }
-}
+}*/
